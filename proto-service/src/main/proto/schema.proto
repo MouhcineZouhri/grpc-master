@@ -1,0 +1,20 @@
+syntax="proto3";
+
+option java_multiple_files = true;
+
+package com.mouhcine;
+
+message Book{
+  int64 id = 1;
+  string name = 2;
+  int64 page = 3;
+}
+
+message BookRequest{
+  int64 id = 1;
+}
+
+service BookService{
+  rpc getBook (BookRequest) returns (Book) {}
+}
+
